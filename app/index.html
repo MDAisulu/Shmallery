@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Angular with Webpack</title>
+</head>
+<body ng-controller="appCtrl">
+  <h1></h1>
+  <form>
+  	<input type="text" name="" placeholder="input url image" ng-model="inputText">
+  	<input type="text" name="" placeholder="title" ng-model="title">
+  	<input type="text" name="" placeholder="width" ng-model="width">
+  	<input type="text" name="" placeholder="height" ng-model="height">
+  	<input type="button" name="" value="Add" ng-click="addImage()"/>
+  </form>
+  <div>
+  	<ul>
+  		<li ng-repeat="img in shmallery">
+  			<b>{{img.title}}</b>
+  			<img src="{{img.url}}" alt="{{img.title}}" height="{{img.height}}" width="{{img.width}}" ng-click="showInfo()"/>
+  		</li>
+  	</ul>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
